@@ -300,7 +300,7 @@ $(function () {
     /*进度条跟随鼠标移动*/
     $(".progressbarbox").mousemove(function (e) {
         var Width = e.pageX - $(".progressbar").offset().left;
-        console.log(Width);
+        // console.log(Width);
         var pbWidth = Width;
         if (pbWidth >= 154) {
             pbWidth = 150;
@@ -313,21 +313,26 @@ $(function () {
         var zl=1.5;
         var a=0;
         var wh=0;
+        var w ;
         if(pbWidth>=1.5){
-            wh+=160;
+            w = Math.round(pbWidth/1.5);
+            wh=160*w;
             if(wh>=1600){
-               a=wh%1600;
+               a=Math.round(wh/1600);
                y=a*90;
+              
                x=wh-(a*1600);
+                console.log(x);
             }else{
-              x+=160;
-            }   
+                x=wh;
+                y=0;
+            }
         }
+        else{
+              x=160;
+            }  
         document.getElementById("gsb").style.backgroundPositionX=x+'px';
         document.getElementById("gsb").style.backgroundPositionY=y+'px';
-        console.log(x);
-        console.log(y);
-        console.log(wh);
          
         });
         
