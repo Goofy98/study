@@ -321,10 +321,10 @@ $(function () {
                a=Math.round(wh/1600);
                y=-a*90;
               
-               x=wh-(a*1600);
+               x=-(wh-(a*1600));
                 console.log(pbWidth);
             }else{
-                x=wh;
+                x=-wh;
                 y=0;
             }
         }
