@@ -322,7 +322,6 @@ $(function () {
                y=-a*90;
               
                x=-(wh-(a*1600));
-                console.log(pbWidth);
             }else{
                 x=-wh;
                 y=0;
@@ -331,8 +330,10 @@ $(function () {
         else{
               x=-160;
             }  
-        document.getElementById("gsb").style.backgroundPositionX=x+'px';
-        document.getElementById("gsb").style.backgroundPositionY=y+'px';
+        // document.getElementById("gsb").style.backgroundPositionX=x+'px';
+        // document.getElementById("gsb").style.backgroundPositionY=y+'px';
+        $(".generalize-scrollbackground").css("background-position",x+'px '+y+'px');
+        console.log(x);
          
         });
         
