@@ -315,10 +315,10 @@ $(function () {
         var wh=0;
         var w ;
         if(pbWidth>=1.5){
-            w = Math.round(pbWidth/1.5);
+            w = Math.floor(pbWidth/1.5);
             wh=160*w;
             if(wh>=1600){
-               a=Math.round(wh/1600);
+               a=Math.floor(wh/1600);
                y=-a*90;
               
                x=-(wh-(a*1600));
@@ -329,7 +329,7 @@ $(function () {
             }
         }
         else{
-              x=160;
+              x=-160;
             }  
         document.getElementById("gsb").style.backgroundPositionX=x+'px';
         document.getElementById("gsb").style.backgroundPositionY=y+'px';
