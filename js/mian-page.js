@@ -302,7 +302,7 @@ $(function () {
         var Width = e.pageX - $(".progressbar").offset().left;
         // console.log(Width);
         var pbWidth = Width;
-        if (pbWidth >= 154) {
+        if (pbWidth >= 150) {
             pbWidth = 150;
         } else if (pbWidth <= 0) {
             pbWidth = 0;
@@ -319,10 +319,10 @@ $(function () {
             wh=160*w;
             if(wh>=1600){
                a=Math.round(wh/1600);
-               y=a*90;
+               y=-a*90;
               
                x=wh-(a*1600);
-                console.log(x);
+                console.log(pbWidth);
             }else{
                 x=wh;
                 y=0;
